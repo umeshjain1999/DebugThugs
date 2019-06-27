@@ -1,0 +1,133 @@
+
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <link rel="stylesheet" type="text/css" href="navbar.css">
+    <title>Map Markers</title>
+    <!--link rel="icon" href="http://mapmyindia.com/images/favicon.ico" type="image/x-icon"-->
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+
+   <script src="https://apis.mapmyindia.com/advancedmaps/v1/n4mqf6dclwwt8xrsjqshuin8wmddfv53/map_load?v=0.1"></script>
+   <style>
+   #map  {margin: 0;padding: 0;width: 70%;height: 75%; top:10%; left:10%; border-radius: 10px;}
+   </style>
+   <script language="javascript">
+   function getLocation() {
+       if (navigator.geolocation) {
+           navigator.geolocation.getCurrentPosition(init);
+       } else {
+           x.innerHTML = "Geolocation is not supported by this browser.";
+       }
+   }
+      function init(position) {
+        var centre = new L.LatLng( position.coords.latitude, position.coords.longitude);
+        map=new MapmyIndia.Map('map',{center:centre,zoomControl: true,hybrid:true });
+        /*1.create a MapmyIndia Map by simply calling new MapmyIndia.Map() and passsing it at the minimum div object, all others are optional...
+          2.all leaflet mapping functions can be called simply on the L object
+          3.MapmyIndia may extend and in future modify the customised/forked Leaflet object to enhance mapping functionality for developers, which will be clearly documented in the MapmyIndia API documentation section.*/
+        var marker1=L.marker(centre).addTo(map);/**--add marker at the centre of map--**/
+        marker1.bindPopup('Look at ME!');
+        var centre = new L.LatLng( 25.0642712, 75.835972);
+        var marker2=L.marker(centre).addTo(map);/**--add marker at the centre of map--**/
+        marker2.bindPopup('Look at ME!');
+        L.marker([28.61, 77.23]).addTo(map);
+      }
+
+
+   </script>
+   <script src="../js/jquery-3.3.1.js" charset="utf-8"></script>
+   <script>
+
+     $(function() {
+
+
+       $("#reg").on('click',function() {
+         $('#popup').slideDown();
+         if ($('#popup').css('display')=='block') {
+           $('#map').css({'z-index':'-1'});
+         }
+       });
+       $("#autoreload_1").on('click',function() {
+       window.location.reload(true);
+       });
+
+      $("#autoreload").on('click',function() {
+      window.location.reload(true);
+      });
+     });
+
+   </script>
+   <style>
+   #map{
+     position: absolute;
+     left:20%;
+
+   }
+   #popup{
+     position: relative;
+     display: none;
+     width: 40%;
+     height: 30%;
+     top: 10%;
+     background-color: #17c0eb;
+     opacity: 0.9;
+     left:35%;
+     border-radius: 5px;
+    }
+    .popupcont{
+      padding: 10px;
+      width: 50%;
+      margin: 10px;
+
+    }
+    input{
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+    textarea{
+      border-radius: 5px;
+      margin-bottom: 5px
+    }
+    input[type=submit]{
+      width: 100px;
+      height: 30px;
+      padding: 5px;
+
+    }
+   </style>
+
+</head>
+<body onload = "getLocation()">
+
+  <div class="back_to_home" style="opacity:0.7">
+    <a href="afterlogin.html"><img src="left.svg" alt="" title="Back to Main Page!" width="40"></a>
+  </div>
+  <div id="popup">
+    <div class="popupcont">
+      <h2 id="autoreload_1" style="font-family:sans-serif; position:absolute; left:90%; top:-5%; cursor:pointer;">X</h2>
+    <input type="text" placeholder="Enter Building Name">
+    <input type="text" placeholder="Enter landmark">
+    <input type="text" placeholder="Enter pincode">
+    <textarea id="text1" rows="4" cols="50" placeholder="Enter Message"></textarea>
+    <input type="submit"  id="autoreload" name="submit" value="submit">
+  </div>
+  </div>
+
+  <button id = "reg" onclick="" style = "left: 10%; top: 10%; float:left; position:absolute; background-color:#18dcff; width: 100px; height:100px; border-radius:10px; box-shadow:5px 5px #000000; color: #4b4b4b; font-weight:bolder;">Register as helping centre</button>
+  <br>
+  <br>
+  <button style = "left: 10%; top: 30%; float:left; position:absolute; background-color:#18dcff; width: 100px; height:100px; border-radius:10px; box-shadow:5px 5px #000000; color: #4b4b4b; font-weight:bolder;">Initiate Funding</button>
+  <br>
+  <br>
+  <button style = "left: 10%; top: 50%; float:left; position:absolute; background-color:#18dcff; width: 100px; height:100px; border-radius:10px; box-shadow:5px 5px #000000; color: #4b4b4b; font-weight:bolder;">Mark Safe</button>
+  <br>
+  <br>
+  <button style = "left: 10%; top: 70%; float:left; position:absolute; background-color:#18dcff; width: 100px; height:100px; border-radius:10px; box-shadow:5px 5px #000000; color: #4b4b4b; font-weight:bolder;">Traffic</button>
+
+
+   <!--1. put your map container here-->
+   <div id="map" ></div>
+</body>
+</html>

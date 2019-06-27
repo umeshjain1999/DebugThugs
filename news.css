@@ -1,0 +1,34 @@
+.holder { 
+  background-color:#ccc;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  padding:10px;
+  font-family:Helvetica;
+}
+.holder .mask {
+  position: relative;
+  left: 0px;
+  top: 10px;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
+.holder ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  position: relative;
+}
+.holder ul li {
+  padding:10px 0px;
+}
+.holder ul li a {
+  color:darkred;
+  text-decoration:none;
+  font-size: 30px;
+}
+.holder span{
+  color: white;
+  font-size: 30px;
+}

@@ -1,0 +1,30 @@
+body{
+  font-family: sans-serif;
+
+}
+h2{
+  text-align: center;
+}
+.cont{
+  background-color: #ddd;
+  border: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.cont h3{
+   font-size: 20px;
+   margin-left: 5px;
+}
+.ulcont{
+  font-weight:lighter;
+  text-decoration: none;
+}
+.cont table{
+  margin-left: 25%;
+  height: 40%;
+  width: 50%;
+}
+.cont td{
+  text-align:center;
+  height: 55px;
+}

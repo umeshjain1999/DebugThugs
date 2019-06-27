@@ -1,0 +1,88 @@
+
+body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f6fa;
+
+}
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+  position: absolute;
+  border: 1px solid rgba(0,0,0, 0.5);
+  border-radius: 4px;
+  padding: 3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+h1{
+  margin-top: 0px;
+  text-align: center;
+  font-size: 45px;
+  color: black;
+  font-weight: lighter;
+}
+input {
+color: white;
+display: block;
+width: 300px;
+height: 40px;
+background: rgba(0,0,0,0.2);
+outline: none;
+border: 1px solid rgba(0, 0, 0, 0.5);
+font-weight: lighter;
+font-size: 14px;
+margin-bottom: 10px;
+padding-left: 10px;
+border-radius: 5px;
+}
+
+button {
+    width: 300px;
+    height: 40px;
+    background: white;
+    font-size: 16px;
+    color: white;
+    padding: 12px 20px;
+    font-weight: lighter;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 8px 6px -6px black;
+}
+
+button:hover {
+    animation: after_click 0.1s forwards 0s linear;
+}
+
+.container a{
+	color: grey;
+	text-decoration: none;
+}
+
+@keyframes after_click{
+    0%{
+        transform: translateX(-10px);
+        }
+    73%{
+        transform: translateX(10px);
+        }
+    100%{
+        transform: rotate(xx) translateX(0px);
+        }
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}

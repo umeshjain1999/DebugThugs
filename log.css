@@ -1,0 +1,129 @@
+body {
+  height:100%;
+font-family:sans-serif;
+
+}
+.profile{
+	padding-left: 100px;
+  background-color:#7ed6df;
+}
+div.ex1 {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 1000px;
+  height: 500px;
+  border: 2px solid rgba(0,0,0,0.4);
+  border-radius: 5px;
+  margin: 10px;
+	width:60%;
+	margin: auto;
+  box-shadow: 5px 5px rgba(0,0,0,0.3)
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.ex1 p{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+.ex1 td{
+    font-size: 20px;
+}
+.issuecont{
+    width: 100%;
+    margin: 10px;
+}
+.issuecont label{
+   font-size: 15px;
+   text-transform: uppercase;
+}
+.fc{
+   display: block;
+   font-size: 18px;
+}
+
+input[type=submit] {
+    width: 300px;
+    height: 40px;
+    background: white;
+    font-size: 16px;
+    color: white;
+    padding: 12px 20px;
+    font-weight: lighter;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 8px 6px -6px black;
+}
+
+input[type=submit]:hover {
+    animation: after_click 0.1s forwards 0s linear;
+}
+
+
+@keyframes after_click{
+    0%{
+        transform: translateX(-10px);
+        }
+    73%{
+        transform: translateX(10px);
+        }
+    100%{
+        transform: rotate(xx) translateX(0px);
+        }
+}
+
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+}
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+select{
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+textarea{
+  border-radius: 5px;
+}
+
+input[type=file]{
+  background-color: rgba(0,0,0,0.2);
+}

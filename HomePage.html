@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Help!</title>
+    <link rel="stylesheet" type="text/css" href="HomePage.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="news.css">
+    <script src="jquery-3.3.1.js" charset="utf-8"></script>
+
+    <script>
+
+      $(function() {
+        $('#popup').addClass('initialallhidden');
+        $("#need_help").on('click',function() {
+          $('#popup').toggle();
+        });
+
+        $(".close").on('click',function() {
+          $('#popup').toggle();
+        });
+      });
+    </script>
+
+
+    <script>
+
+      $(function() {
+        $('#popup2').addClass('initialallhidden');
+        $("#help_others").on('click',function() {
+          $('#popup2').toggle();
+        });
+
+        $(".close2").on('click',function() {
+          $('#popup2').toggle();
+        });
+
+      });
+    </script>
+    <script>
+      $(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+    </script>
+    <script>
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+var    x = position.coords.latitude;
+var    y = position.coords.longitude;
+
+
+}
+    </script>
+  </head>
+
+
+  </head>
+  <body>
+
+<div id="popup">
+<h2>EMERGENCY</h2>
+
+<form class="popup_form"  method="post">
+  <h3> Type of issue:
+  <select name="issue">
+    <option value="Fire">Fire</option>
+    <option value="Infra">Building Collapse</option>
+    <option value="Quake">Earthquake</option>
+    <option value="Rain">Heavy Rain</option>
+  </select>  </h3>
+  <br>
+  <h3>Image of the calamity: <input type="file"> </h3>
+  <br>
+  <br>
+  <input id="emergency" onclick="getLocation()" type="submit" value"Submit" class = "sign">
+<h3 class="close" style=" cursor: pointer; position:absolute; top: 88%; left: 50%; border-radius:50%; background:black; width:30px; color:white">X</h3>
+</form>
+</div>
+
+<div id="popup2">
+<h2>Help Others.</h2>
+<h2> Please <b>Sign</b> Up in-order to use this function. If you have signed up already then please <b>login</b> to continue. </h2>
+<br>
+<br>
+<form>
+<input type="button" value="SIGN UP" onclick="window.location.href='sign_up.html'"  class = "sign"/>
+<input type="button" value="LOGIN" onclick="window.location.href='login.html'"  class = "sign"/>
+</form>
+<form class="popup_form" action="index.html" method="post">
+<h3 class="close2" style=" cursor: pointer; position:absolute; top: 88%; left: 50%; border-radius:50%; background:black; width:30px; color:white">X</h3>
+</form>
+</div>
+
+<nav>
+  <div id="navbar">
+      <a href="#Home">HOME</a>
+      <a href="#News">NEWS</a>
+      <a href="#Precaution">PRECAUTION</a>
+      <a href="#Aboutus">ABOUT US</a>
+      <a  class="right" href="login.html">LOG IN</a>
+      <a  class="right" href="sign_up.html">SIGN UP</a>
+  </div>
+</nav>
+
+<section id="Home">
+  <div class="Home_div">
+    <div  class="col" id="need_help">
+      <div class="content">
+        <a href="#">NEED HELP!</a>
+      </div>
+    </div>
+    <div class="col" id="help_others">
+      <div class="content">
+        <a href="#">HELP OTHERS :)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="News">
+  <h2><center>NEWS<hr width=40></center></h2>
+  <div class="News_div">
+    <h3>Popular Tweets that are helpful in case of emergency in maharashtra.</h3>
+    <div class="tweet">
+      <a class="twitter-timeline" href="https://twitter.com/MumbaiPolice?ref_src=twsrc%5Etfw">Tweets by MumbaiPolice</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <div class="tweet1">
+      <a class="twitter-timeline" href="https://twitter.com/Dev_Fadnavis?ref_src=twsrc%5Etfw">Tweets by Dev_Fadnavis</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+
+</section>
+
+<section id="Precaution">
+  <h2><center>PRECAUTION<hr width=40></center></h2>
+  <div class="Precaution_div">
+    <div class="main">
+    <div class="column">
+      <div class="image">
+      <a href="precaution.html#flood" style="text-decoration:none;"><img src="image/flood.svg" alt="" ></a>
+    </div>
+    <div class="content">
+      <a href="precaution.html#flood" style="text-decoration:none;"><h2>Flood</h2></a>
+    </div>
+    </div>
+    <div class="column">
+      <div class="image">
+      <a href="precaution.html#fire"><img src="image/fire.svg" alt=""></a>
+    </div>
+    <div class="content">
+      <a href="precaution.html#fire" style="text-decoration:none;"><h2>Fire</h2></a>
+    </div>
+    </div>
+
+
+      <div class="column">
+        <div class="image">
+        <a href="precaution.html#terrorism"><img src="image/terror.svg" alt=""  width=200></a>
+      </div>
+      <div class="content">
+        <a href="precaution.html#terrorism" style="text-decoration:none;"><h2>Terrorism</h2></a>
+      </div>
+    </div>
+
+        <div class="column">
+          <div class="image">
+          <a href="precaution.html#tsunami"><img src="image/tsunami.svg" alt="" ></a>
+        </div>
+        <div class="content">
+          <a href="precaution.html#tsunami" style="text-decoration:none;"><h2>Tsunami</h2></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="main1">
+    <div class="column">
+    <div class="image">
+    <a href="precaution.html#accident" style="text-decoration:none;"><img src="image/car-collision.svg" alt="" ></a>
+    </div>
+    <div class="content">
+    <a href="precaution.html#accident" style="text-decoration:none;"><h2>Accident</h2></a>
+    </div>
+    </div>
+    <div class="column">
+    <div class="image">
+    <a href="precaution.html#chaos"><img src="image/public.svg" alt=""></a>
+    </div>
+    <div class="content">
+    <a href="precaution.html#chaos" style="text-decoration:none;"><h2>Chaos</h2></a>
+    </div>
+    </div>
+
+
+    <div class="column">
+      <div class="image">
+      <a href="precaution.html#lackofwater"><img src="image/water.svg" alt="" ></a>
+    </div>
+    <div class="content">
+      <a href="precaution.html#lackofwater" style="text-decoration:none;"><h2>Lack of water</h2></a>
+    </div>
+    </div>
+
+      <div class="column">
+        <div class="image">
+        <a href="precaution.html#other"><img src="image/question.svg" alt="" ></a>
+      </div>
+      <div class="content">
+        <a href="precaution.html#other" style="text-decoration:none;"><h2>Others</h2></a>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="Aboutus">
+  <h2><center>ABOUT US<hr width=40></center></h2>
+  <div class="copyright">
+    <p>&copy 2018 - Organisation</p>
+  </div>
+  <div class="contact_us">
+    <a href="ujain2601@gmail.com">debugsthuggs@gmail.com</a>
+  </div>
+  <ul class="links">
+    <li><a href="#"><img src="facebook-logo-button.svg" alt=""> </a> </li>
+    <li><a href="#"><img src="twitter-logo-button.svg" alt=""></a> </li>
+  </ul>
+
+</footer>
+
+  </body>
+</html>

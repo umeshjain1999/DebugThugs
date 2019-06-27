@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="log.css">
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#",id="report">Report Issue </a>
+  <a href="help.html",id="comissues">Help Community!</a>
+  <a href="index.html",id="logout">Logout</a>
+</div>
+<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+<div class="ex1">
+<p>Report Issue</p>
+<form class="issuecont">
+<table>
+<tr>
+<td><label>ISSUE:</label></td>
+<td> <select name="issue type">
+    <option value="Natural Calamities">Natural Calamities</option>
+    <option value="Terrorism">Terrorism</option>
+    <option value="Chaos">Chaos</option>
+    <option value="other">other</option>
+  </select></td>
+</tr>
+<tr>
+<td><label>Sevice require:</label></td>
+<td>
+<div class="fc">
+<table>
+<tr>
+<td><input type="checkbox" name="Hospital" value="Hospital" checked> <label>Hospital</label> </td>
+<td><input type="checkbox" name="Firebrigade" value="Firebrigade"> <label>Firebrigade</label></td>
+<td><input type="checkbox" name="Police" value="Police" >  <label>Police</label></td>
+</tr>
+<tr>
+<td><input type="checkbox" name="Traffic Police" value="Traffic Police" > <label> Traffic Police</label></td>
+<td><input type="checkbox" name="Earth-quake Help line service" value="TEarth-quake Help line service">  <label>Earth-quake Help line service</label></td>
+<td><input type="checkbox" name="Water Board" value="Water Board">  <label>Water Board</label></td>
+</tr>
+<tr>
+<td><input type="checkbox" name="Railway Enquiry" value="Railway Enquiry"> <label> Railway Enquiry</label></td>
+<td><input type="checkbox" name="Child abuse hotline" value="Child abuse hotline" > <label>Child abuse hotline</label></td>
+<td><input type="checkbox" name="National Consumer Helpline" value="National Consumer Helpline"> <label>National Consumer Helpline</label></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td><label>ISSUE:</label></td>
+<td><textarea rows="4" cols="50" placeholder="Enter Issue"></textarea></td>
+</tr>
+<tr>
+<td><label>UPLOAD IMAGE:</label></td>
+<td><input type="file" name="pic" accept="image/*"></td>
+</tr>
+</table>
+<center><input type="submit"></center>
+</form>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>
